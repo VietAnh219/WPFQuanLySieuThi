@@ -1,0 +1,57 @@
+﻿<Window x:Class="QuanLySieuThi.GUI.Frm_BaoCao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLySieuThi.GUI"
+        mc:Ignorable="d"
+        Title="Frm_BaoCao" Height="450" Width="800">
+    <Grid>
+        <!-- Thanh menu chính -->
+        <DockPanel DockPanel.Dock="Top">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Hệ Thống">
+                    <MenuItem Header="Đăng Xuất" Click="Menu_DangXuat_Click"/>
+                    <MenuItem Header="Thoát" Click="Menu_Thoat_Click"/>
+                </MenuItem>
+                <MenuItem Header="Danh Mục">
+                    <MenuItem Header="Nhân Viên" Click="Menu_NhanVien_Click"/>
+                    <MenuItem Header="Loại Sản Phẩm" Click="Menu_LoaiSanPham_Click"/>
+                    <MenuItem Header="Sản Phẩm" Click="Menu_SanPham_Click"/>
+                    <MenuItem Header="Khuyến Mãi" Click="Menu_KhuyenMai_Click"/>
+                    <MenuItem Header="Nhà Cung Cấp" Click="Menu_NhaCungCap_Click"/>
+                    <MenuItem Header="Khách Hàng" Click="Menu_KhachHang_Click"/>
+                    <MenuItem Header="Tài Khoản" Click="Menu_TaiKhoan_Click"/>
+                </MenuItem>
+                <MenuItem Header="Bán Hàng">
+                    <MenuItem Header="Lập Hóa Đơn" Click="Menu_LapHoaDon_Click"/>
+                    <MenuItem Header="Bán Hàng" Click="Menu_BanHang_Click"/>
+                </MenuItem>
+                <MenuItem Header="Báo Cáo">
+                    <MenuItem Name="Menu_BaoCao" Header="Báo Cáo Doanh Thu" Click="Menu_BaoCao_Click"/>
+                </MenuItem>
+                <MenuItem Header="Trang chủ">
+                    <MenuItem x:Name="Menu_TrangChu" Header="Trang chu" Click="Menu_TrangChu_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+
+        <!-- Phần nội dung -->
+        <Canvas Margin="10,30,10,10">
+            <!-- GroupBox: Loại sản phẩm -->
+            <GroupBox Header="Thống kê theo ngày" Canvas.Left="10" Canvas.Top="10" Width="760" Height="140">
+                <Canvas>
+                    <Label Content="Ngày:" Canvas.Left="26" Canvas.Top="31" RenderTransformOrigin="8.561,0.501" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <DatePicker Name="dtpChonNgay" Width="101" Canvas.Left="114" Canvas.Top="32" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.364,-0.256" SelectedDateChanged="dtpChonNgay_ValueChanged"/>
+                    <TextBlock Name="txtTongDoanhThu" Text="Tổng Doanh Thu: 0" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="455" Canvas.Top="33"/>
+                </Canvas>
+            </GroupBox>
+
+            <!-- GroupBox: Danh sách loại sản phẩm -->
+            <GroupBox Header="Chi tiết" Canvas.Left="10" Canvas.Top="170" Width="760" Height="220" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <DataGrid Name="dtgvChiTiet" Grid.Column="0" Grid.ColumnSpan="2" AutoGenerateColumns="True" Margin="4,0,4,0" Grid.RowSpan="2" Width="740" Height="180">
+                </DataGrid>
+            </GroupBox>
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="QuanLySieuThi.GUI.Frm_TrangChu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLySieuThi"
+        mc:Ignorable="d"
+        Title="Frm_TrangChu" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <!-- Thanh menu chính -->
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Hệ Thống">
+                    <MenuItem Header="Đăng Xuất" Click="Menu_DangXuat_Click"/>
+                    <MenuItem Header="Thoát" Click="Menu_Thoat_Click"/>
+                </MenuItem>
+                <MenuItem Header="Danh Mục">
+                    <MenuItem Header="Nhân Viên" Click="Menu_NhanVien_Click"/>
+                    <MenuItem Header="Loại Sản Phẩm" Click="Menu_LoaiSanPham_Click"/>
+                    <MenuItem Header="Sản Phẩm" Click="Menu_SanPham_Click"/>
+                    <MenuItem Header="Khuyến Mãi" Click="Menu_KhuyenMai_Click"/>
+                    <MenuItem Header="Nhà Cung Cấp" Click="Menu_NhaCungCap_Click"/>
+                    <MenuItem Header="Khách Hàng" Click="Menu_KhachHang_Click"/>
+                    <MenuItem Header="Tài Khoản" Click="Menu_TaiKhoan_Click"/>
+                </MenuItem>
+                <MenuItem Header="Bán Hàng">
+                    <MenuItem Header="Lập Hóa Đơn" Click="Menu_LapHoaDon_Click"/>
+                    <MenuItem Header="Bán Hàng" Click="Menu_BanHang_Click"/>
+                </MenuItem>
+                <MenuItem Header="Báo Cáo">
+                    <MenuItem x:Name="Menu_BaoCao" Header="Báo Cáo Doanh Thu" Click="Menu_BaoCao_Click"/>
+                </MenuItem>
+                <MenuItem Header="Trang chủ">
+                    <MenuItem x:Name="Menu_TrangChu" Header="Trang chu" Click="Menu_TrangChu_Click"/>
+                </MenuItem>
+            </Menu>
+
+            <Grid Name="MainContentArea">
+                <Image Source="Image/yourimage.jpg" Stretch="Fill" />
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
