@@ -217,6 +217,13 @@ namespace QuanLySieuThi.GUI
 
 			this.Close();
 		}
+		private void Menu_ThuongHieu_Click(object sender, RoutedEventArgs e)
+		{
+			Frm_ThuongHieu frm_ThuongHieu = new Frm_ThuongHieu();
+			frm_ThuongHieu.Show();
+
+			this.Close();
+		}
 
 		private void Menu_KhuyenMai_Click(object sender, RoutedEventArgs e)
 		{

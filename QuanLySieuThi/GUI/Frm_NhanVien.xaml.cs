@@ -1,5 +1,6 @@
 ﻿using QuanLySieuThi.GUI;
 using System.Data;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -120,7 +121,8 @@ namespace QuanLySieuThi
                 }
                 else
                 {
-					string sql = $"INSERT INTO NhanVien (maNV, hoTen, ngaySinh, gioiTinh, dienThoai, maChucVu) VALUES ('{txtMaNV.Text}', '{txtHoTen.Text}', '{dpNgaySinh.Text}', '{gioiTinh}', '{txtSDT.Text}', '{cbb_ChucVu.Text}')";
+					string ngaySinh = DateTime.ParseExact(dpNgaySinh.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture).ToString("yyyy-MM-dd");
+					string sql = $"INSERT INTO NhanVien (maNV, hoTen, ngaySinh, gioiTinh, dienThoai, maChucVu) VALUES ('{txtMaNV.Text}', '{txtHoTen.Text}', '{ngaySinh}', '{gioiTinh}', '{txtSDT.Text}', '{cbb_ChucVu.Text}')";
                     KetNoiSQL.Them(sql, dtgvNhanVien);
                     KetNoiSQL.ChuoiKetNoi(chuoi, dtgvNhanVien);
                     //TenBang();
@@ -289,6 +291,14 @@ namespace QuanLySieuThi
 		{
 			Frm_BanHang frm_BanHang = new Frm_BanHang();
 			frm_BanHang.Show();
+
+			this.Close();
+		}
+
+		private void Menu_ThuongHieu_Click(object sender, RoutedEventArgs e)
+		{
+			Frm_ThuongHieu frm_ThuongHieu = new Frm_ThuongHieu();
+			frm_ThuongHieu.Show();
 
 			this.Close();
 		}

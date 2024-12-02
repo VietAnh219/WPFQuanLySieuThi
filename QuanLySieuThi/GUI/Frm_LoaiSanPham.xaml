@@ -14,6 +14,7 @@
                     <MenuItem Header="Nhân Viên" Click="Menu_NhanVien_Click"/>
                     <MenuItem Header="Loại Sản Phẩm" Click="Menu_LoaiSanPham_Click"/>
                     <MenuItem Header="Sản Phẩm" Click="Menu_SanPham_Click"/>
+                    <MenuItem Header="Thương Hiệu" Click="Menu_ThuongHieu_Click"/>
                     <MenuItem Header="Khuyến Mãi" Click="Menu_KhuyenMai_Click"/>
                     <MenuItem Header="Nhà Cung Cấp" Click="Menu_NhaCungCap_Click"/>
                     <MenuItem Header="Khách Hàng" Click="Menu_KhachHang_Click"/>

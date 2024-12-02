@@ -252,6 +252,14 @@ namespace QuanLySieuThi.GUI
 
 			this.Close();
 		}
+
+		private void Menu_ThuongHieu_Click(object sender, RoutedEventArgs e)
+		{
+			Frm_ThuongHieu frm_ThuongHieu = new Frm_ThuongHieu();
+			frm_ThuongHieu.Show();
+
+			this.Close();
+		}
 		private MessageBoxResult ShowConfirmMessage(string title, string message)
 		{
 			return MessageBox.Show(title, message, MessageBoxButton.YesNo, MessageBoxImage.Question);
