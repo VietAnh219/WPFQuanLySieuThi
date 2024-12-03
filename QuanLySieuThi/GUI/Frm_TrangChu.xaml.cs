@@ -102,7 +102,15 @@ namespace QuanLySieuThi.GUI
             this.Close();
 		}
 
-        private void Menu_Thoat_Click(object sender, RoutedEventArgs e)
+		private void Menu_ChucVu_Click(object sender, RoutedEventArgs e)
+		{
+			Frm_ChucVu frm_ChucVu = new Frm_ChucVu();
+			frm_ChucVu.Show();
+
+			this.Close();
+		}
+
+		private void Menu_Thoat_Click(object sender, RoutedEventArgs e)
         {
 			this.Close();
 		}

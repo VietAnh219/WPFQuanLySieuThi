@@ -317,6 +317,14 @@ namespace QuanLySieuThi
 				loginForm.Show();
 			}
 		}
+		private void Menu_ChucVu_Click(object sender, RoutedEventArgs e)
+		{
+			Frm_ChucVu frm_ChucVu = new Frm_ChucVu();
+			frm_ChucVu.Show();
+
+			this.Close();
+		}
+
 		//private MessageBoxResult ShowConfirmMessage(string title, string message)
 		//{
 		//	return MessageBox.Show(title, message, MessageBoxButton.YesNo, MessageBoxImage.Question);

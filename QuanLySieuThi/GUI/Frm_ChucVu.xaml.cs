@@ -270,6 +270,14 @@ namespace QuanLySieuThi.GUI
 			this.Close();
 		}
 
+		private void Menu_ChucVu_Click(object sender, RoutedEventArgs e)
+		{
+			Frm_ChucVu frm_ChucVu = new Frm_ChucVu();
+			frm_ChucVu.Show();
+
+			this.Close();
+		}
+
 		private void Menu_ThuongHieu_Click(object sender, RoutedEventArgs e)
 		{
 			Frm_ThuongHieu frm_ThuongHieu = new Frm_ThuongHieu();

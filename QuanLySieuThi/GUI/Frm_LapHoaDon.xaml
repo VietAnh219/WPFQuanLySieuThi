@@ -30,6 +30,7 @@
                     <MenuItem Header="Nhà Cung Cấp" Click="Menu_NhaCungCap_Click"/>
                     <MenuItem Header="Khách Hàng" Click="Menu_KhachHang_Click"/>
                     <MenuItem Header="Tài Khoản" Click="Menu_TaiKhoan_Click"/>
+                    <MenuItem Header="Chức vụ" Click="Menu_ChucVu_Click"/>
                 </MenuItem>
                 <MenuItem Header="Bán Hàng">
                     <MenuItem Header="Lập Hóa Đơn" Click="Menu_LapHoaDon_Click"/>
