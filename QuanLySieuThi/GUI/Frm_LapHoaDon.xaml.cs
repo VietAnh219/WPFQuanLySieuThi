@@ -183,15 +183,20 @@ namespace QuanLySieuThi.GUI
 
 		private void btnXoa_Click(object sender, EventArgs e)
 		{
-			string sql = "DELETE FROM HoaDon WHERE MaHD = '" + txtMaHD.Text + "'";
-			KetNoiSQL.Xoa(sql);
+			string sqlXoaChiTiet = "DELETE FROM HoaDonChiTiet WHERE MaHD = '" + txtMaHD.Text + "'";
+			KetNoiSQL.Xoa(sqlXoaChiTiet);
+
+			// Xóa bản ghi trong bảng chính (HoaDon)
+			string sqlXoaHoaDon = "DELETE FROM HoaDon WHERE MaHD = '" + txtMaHD.Text + "'";
+			KetNoiSQL.Xoa(sqlXoaHoaDon);
 			KetNoiSQL.ChuoiKetNoi(chuoi, dtgvHD);
 			TenBangHoaDon();
 		}
 
 		private void btnSua_Click(object sender, EventArgs e)
 		{
-			string sql = "UPDATE HoaDon SET maNV = '" + cbxMaNV.Text + "', maKH = N'" + cbxMaKH.Text + "', NgayLap = N'" + dpNgayLap.Text + "', ghiChu = N'" + txtGhiChu.Text + "' WHERE MaHD = '" + txtMaHD.Text + "'";
+			string ngayLap = dpNgayLap.SelectedDate.Value.ToString("yyyy-MM-dd");
+			string sql = "UPDATE HoaDon SET maNV = '" + cbxMaNV.Text + "', maKH = N'" + cbxMaKH.Text + "', NgayLap = N'" + ngayLap + "', ghiChu = N'" + txtGhiChu.Text + "' WHERE MaHD = '" + txtMaHD.Text + "'";
 			KetNoiSQL.Sua(sql);
 			KetNoiSQL.ChuoiKetNoi(chuoi, dtgvHD);
 			TenBangHoaDon();
